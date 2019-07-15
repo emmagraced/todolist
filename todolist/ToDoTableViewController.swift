@@ -27,10 +27,9 @@ class ToDoTableViewController: UITableViewController {
 
     
 
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDos.count
-    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+    return toDos.count
+   }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +49,19 @@ class ToDoTableViewController: UITableViewController {
     if let addVC = segue.destination as? AddToDoViewController {
            addVC.previousVC = self
           }
+    if let completeVC = segue.destination as? CompleteViewController {
+        if let toDo = sender as? ToDo {
+        completeVC.selectedToDo = toDo
+        completeVC.previousVC = self
+    }
   }
+}
+override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let toDo = toDos[indexPath.row]
+    performSegue(withIdentifier: "moveToComplete", sender: toDo)
+}
+
+
 
 }
 

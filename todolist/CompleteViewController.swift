@@ -1,5 +1,5 @@
 //
-//  AddToDoViewController.swift
+//  CompleteViewController.swift
 //  todolist
 //
 //  Created by Emma Davis on 7/15/19.
@@ -8,30 +8,22 @@
 
 import UIKit
 
-class AddToDoViewController: UIViewController {
+class CompleteViewController: UIViewController {
     var previousVC = ToDoTableViewController()
-
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var importantSwitch: UISwitch!
+    var selectedToDo = ToDo()
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+     titleLabel.text = selectedToDo.name
     }
     
-    @IBAction func addTapped(_ sender: Any) {
-        let toDo = ToDo()
-        if let titleText = titleTextField.text {
-            toDo.name = titleText
-            toDo.important = importantSwitch.isOn
-        }
-        previousVC.toDos.append(toDo)
-        previousVC.tableView.reloadData()
-navigationController?.popViewController(animated: true)
-  }
-
-/*
+    @IBAction func completeTapped(_ sender: Any) {
+        
+    }
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

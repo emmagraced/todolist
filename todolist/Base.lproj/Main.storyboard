@@ -40,10 +40,49 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="IeV-yy-nS1" kind="show" identifier="moveToComplete" id="MEY-RV-lzY"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6L-1W-aQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1030.4347826086957" y="129.91071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nwe-Mk-0Zc">
+            <objects>
+                <viewController id="IeV-yy-nS1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcE-1H-Egq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1p-91-gL0">
+                                <rect key="frame" x="125" y="344" width="124" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="complete"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="are you done?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCD-Dy-A3X">
+                                <rect key="frame" x="73" y="187" width="228" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j1t-qU-Mzc" firstAttribute="trailing" secondItem="SCD-Dy-A3X" secondAttribute="trailing" constant="74" id="A1h-hb-K3y"/>
+                            <constraint firstItem="K1p-91-gL0" firstAttribute="leading" secondItem="j1t-qU-Mzc" secondAttribute="leading" constant="125" id="Pe7-36-dyE"/>
+                            <constraint firstItem="SCD-Dy-A3X" firstAttribute="top" secondItem="j1t-qU-Mzc" secondAttribute="top" constant="99" id="SG2-MI-MA3"/>
+                            <constraint firstItem="K1p-91-gL0" firstAttribute="top" secondItem="SCD-Dy-A3X" secondAttribute="bottom" constant="111" id="mT7-av-7cf"/>
+                            <constraint firstItem="j1t-qU-Mzc" firstAttribute="trailing" secondItem="K1p-91-gL0" secondAttribute="trailing" constant="126" id="pvs-Cf-IgO"/>
+                            <constraint firstItem="SCD-Dy-A3X" firstAttribute="leading" secondItem="j1t-qU-Mzc" secondAttribute="leading" constant="73" id="qtu-61-Mag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j1t-qU-Mzc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKO-K9-6WZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="883"/>
         </scene>
         <!--Add To Do View Controller-->
         <scene sceneID="KPp-xA-t1r">
