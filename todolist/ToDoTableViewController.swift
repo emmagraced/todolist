@@ -8,17 +8,17 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class ToDoTableViewController: UITableViewController {
 
-    func createToDos() -> [toDo] {
-        let swift = toDo()
+    func createToDos() -> [ToDo] {
+        let swift = ToDo()
         swift.name = "Learn Swift"
         swift.important = true
-        let dog = toDo()
+        let dog = ToDo()
         dog.name = "walk dog"
     return [swift, dog]
     }
-    var toDos : [toDo] = []
+    var toDos : [ToDo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,19 +43,15 @@ class TableViewController: UITableViewController {
             cell.textLabel?.text = toDo.name
         }
         return cell
+
     }
- 
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let addVC = segue.destination as? AddToDoViewController {
+//            addVC.previousVC = self
+//        }
+//    }
 
-        }    
-
-
-
-
-    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-   // }
-    
+}
 
 
