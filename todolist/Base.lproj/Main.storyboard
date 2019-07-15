@@ -71,31 +71,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-4U-ViO">
-                                <rect key="frame" x="184" y="341" width="10" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5p-5V-JKt">
                                 <rect key="frame" x="112" y="418" width="152" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Add To-Do"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="0Y5-hK-rdT" eventType="touchUpInside" id="VVo-aN-Bs5"/>
+                                </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vfs-4U-ViO">
+                                <rect key="frame" x="163" y="341" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U5p-5V-JKt" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="112" id="0PH-jm-9Lg"/>
                             <constraint firstItem="Htc-sH-a06" firstAttribute="top" secondItem="UI0-xe-FvI" secondAttribute="bottom" constant="8" id="25W-hA-BYa"/>
                             <constraint firstItem="UI0-xe-FvI" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="133" id="Bnn-ff-ci2"/>
+                            <constraint firstItem="vfs-4U-ViO" firstAttribute="top" secondItem="frw-rm-Wbo" secondAttribute="bottom" constant="16" id="G1L-h7-MOY"/>
                             <constraint firstItem="vfs-4U-ViO" firstAttribute="top" secondItem="frw-rm-Wbo" secondAttribute="bottom" constant="17" id="G4E-Cw-lek"/>
+                            <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="vfs-4U-ViO" secondAttribute="trailing" constant="163" id="HxS-3A-kI0"/>
                             <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="UI0-xe-FvI" secondAttribute="trailing" constant="132" id="O4a-Du-4hO"/>
                             <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="U5p-5V-JKt" secondAttribute="trailing" constant="101" id="VEB-eR-Bic"/>
-                            <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="vfs-4U-ViO" secondAttribute="trailing" constant="183" id="WZm-EA-EFq"/>
                             <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="frw-rm-Wbo" secondAttribute="trailing" constant="126" id="ZMX-hj-dCS"/>
                             <constraint firstItem="U5p-5V-JKt" firstAttribute="top" secondItem="vfs-4U-ViO" secondAttribute="bottom" constant="46" id="aO9-Pu-uQt"/>
                             <constraint firstItem="frw-rm-Wbo" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="127" id="cmP-Nd-VIq"/>
                             <constraint firstItem="Htc-sH-a06" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="159" id="cnc-SN-Rmg"/>
+                            <constraint firstItem="vfs-4U-ViO" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="163" id="ft7-Pw-pPs"/>
                             <constraint firstItem="frw-rm-Wbo" firstAttribute="top" secondItem="Htc-sH-a06" secondAttribute="bottom" constant="58" id="kVK-kA-c2q"/>
                             <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="U5p-5V-JKt" secondAttribute="trailing" constant="111" id="kdP-Zl-JY2"/>
-                            <constraint firstItem="vfs-4U-ViO" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="184" id="vKK-L8-Ch7"/>
                             <constraint firstItem="p77-GO-ftQ" firstAttribute="trailing" secondItem="Htc-sH-a06" secondAttribute="trailing" constant="158" id="xbH-y5-KWX"/>
                             <constraint firstItem="U5p-5V-JKt" firstAttribute="leading" secondItem="p77-GO-ftQ" secondAttribute="leading" constant="112" id="yJj-wx-nzX"/>
                             <constraint firstItem="UI0-xe-FvI" firstAttribute="top" secondItem="p77-GO-ftQ" secondAttribute="top" constant="57" id="yLD-QS-uCO"/>
@@ -103,6 +107,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p77-GO-ftQ"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="vfs-4U-ViO" id="DEf-t7-yPU"/>
+                        <outlet property="titleTextField" destination="Htc-sH-a06" id="mwc-XD-pdv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="261-kx-k1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
